@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../website_page.dart';
+
 class TopCategoriesWidget extends StatelessWidget {
   const TopCategoriesWidget({super.key});
 
@@ -48,9 +50,17 @@ class TopCategoriesWidget extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
-                        child: Image.asset(
-                          'assets/images/salt.png',
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WebsitePage()));
+                        },
+                        child: Expanded(
+                          child: Image.asset(
+                            'assets/images/salt.png',
+                          ),
                         ),
                       ),
                       const SizedBox(height: 8),
